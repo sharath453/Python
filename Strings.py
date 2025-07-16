@@ -34,13 +34,22 @@ print(name1[4::1]+name1[0:4:1])  #output : athShar
 
 
 #String Functions
-name="sHARATH"
+name="SHARATH"
 print(len(name)) #this function helps to find the length of the String
 print(name.endswith('a'))  #it will cheeck whether String ends with given char if yes it will print (True) else (False)
 print(name.startswith('s')) #it is opposite to endswith function both are case sensitive
 print(name.capitalize())  # it will convert first letter into capitial(only first alphabet)
 print(name.lower())  #convert entair String into lower
-print(name.upper()) #convert the entair String into a upper case
+print(name.upper()) #convert the entair String into a upper 
+print(name.strip()) #This method will remove all the white spaces wxceepy in b/w the letters living 
+
+print(name.replace('sHARATH', 'Dinesh'))  #it will replace the present String in the sentance or char from the given String or a char
+print(name.split()) #this will split the string to separe Strings
+print(name.casefold()) #converts all the charters to lower case but it is different from lower()
+
+print('_'*50)
+alpha="Manoj"
+print(alpha.isalpha()) #Returns True if all characters in the string are in the alphabet
 
 
 #escape sequence
@@ -57,7 +66,38 @@ print(myname)   #output : sharathsharathsharathDeepashree
 p="SHarath" "A L"  #Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.
 print(p) #output : SHarathA L
 
+print('-'*30)
+
+# Loop through the letters in the word "banana":
+for i in "Banana":
+    print(i)
+
+print("_"*50)
+
+#check the particular string is their or not 
+data="Sharath is a good boy"
+print("Good" in data)  #false
+
+if "Sharath" in data:
+    print(f"yes u are finding term is their")
+
+#how to delete the String in python 
+s="sony"
+del s  #s variable is deeted, if we try to pprint it it will through the error
 
 
+#convert the intergeree into a string
+a=65
+b=str(a)  #better to use this their are may types to do
+b="{}".format(a) 
+print(type(b))  #converted into string
 
+#accessing a elements of String
+a="manoj"
 
+# method 1 
+for i in a:
+    print(i)
+
+for i, j in enumerate(a):
+    print(f"Index {i} : {j}")
